@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 Resource  variables.robot
 
-*** Variables ***
 
 *** Keywords ***
 Begin Web Test
