@@ -18,15 +18,11 @@ Vérifier que le profile demandeur est selectionne
     Wait Until Page Contains Element  xpath=/html/body/header/div/ul/li[1]/ul/li[2]/a
 
 Creer nouvelle demande
-    Mouse over    xpath=/html/body/header/div/ul/li[1]
+    Mouse over    xpath=/html/body/header/div/ul/li[1]/a
 
-    Page Should Contain Element    xpath=//*[@id="list_of_test_types"]    5s
+    Page Should Contain Element    xpath=/html/body/header/div/ul/li[1]/ul    5s
 
-    Click Element   ${User_Menu Link}
-
-    Mouse Down    xpath=//li[contains(.,'${STR}')]
-
-    Click Element  xpath=//li[contains(.,'${STR}')]
+    Click Link   xpath=/html/body/header/div/ul/li[1]/ul/li[2]/a
 
     Wait Until Page Contains  En création
 
@@ -41,11 +37,11 @@ Renseigner la description du projet
 
     Clear Element Text  name=date_livraison
 
-    Input Text  name=date_livraison  29/03/2019
+    Input Text  name=date_livraison  ${DATE_PROJET}
 
-    Clear Element Text  name=date_fin_souhaitee
+    Click Element  name=date_fin_souhaitee
 
-    Input Text  name=date_fin_souhaitee  ${DATE_PROJET}
+    Click Element  xpath=/html/body/div[3]/div[1]/table/tbody/tr[5]/td[5]
 
     Clear Element Text  name=projet
 
