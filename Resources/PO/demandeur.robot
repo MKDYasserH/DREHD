@@ -13,7 +13,6 @@ Charger La page
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
 
-
 Choisir le profile
     Click Element  xpath=//*[@id="choisirProfil"]
 
@@ -22,7 +21,6 @@ Choisir le profile
 
 Vérifier que le profile demandeur est selectionne
     Wait Until Page Contains Element  xpath=/html/body/header/div/ul/li[1]/ul/li[2]/a
-
 
 Creer nouvelle demande
     Mouse over    xpath=/html/body/header/div/ul/li[1]/a
@@ -74,7 +72,6 @@ Renseigner la description du projet
 
     Input Text   name=desc_demande  ${DESCRIPTION_PROJET}
 
-
 Renseigner l'implantation
 
 #    Click Element  xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select
@@ -83,7 +80,6 @@ Renseigner l'implantation
 #
 #    Click Element  xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select/option[2]
     Select From List By Value  xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select  1
-
 
 Renseigner Info Complementaire
     Click Element  xpath=/html/body/main/div/form/div/div[2]/div[1]/div[2]/div/div/div[2]/select
@@ -97,7 +93,6 @@ Renseigner Info Complementaire
 
     Click Element  xpath=/html/body/main/div/form/div/div[2]/div[1]/div[2]/div/div/div[4]/select/option[2]
 
-
 Premier submit
 
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
@@ -105,7 +100,6 @@ Premier submit
     Click Button  name=save
 
     Wait Until Page Contains  L'élément a été créé avec succès
-
 
 Ajout materiel
 
@@ -140,8 +134,6 @@ Renseigner Info materiel
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
 
     Click Button  id=bt_save_materiel
-
-
 
 Deposer Demande
 

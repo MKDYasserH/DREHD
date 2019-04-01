@@ -1,5 +1,6 @@
 *** Settings ***
 Resource  ../Resources/PO/demandeur.robot
+Resource  ../Resources/PO/urbaniste.robot
 Resource  ../Resources/common.robot
 
 Suite Setup  common.Begin Web Test
@@ -19,3 +20,11 @@ Test 1
     demandeur.Ajout materiel
     demandeur.Renseigner Info materiel
     demandeur.Deposer Demande
+
+Test 2
+    [Tags]  Current
+    urbaniste.Charger La Page
+    urbaniste.Rechercher Demande en etude
+    urbaniste.Info DIF
+    urbaniste.Etude
+    urbaniste.Verifier Fin Etude
