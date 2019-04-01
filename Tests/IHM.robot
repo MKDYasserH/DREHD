@@ -13,3 +13,9 @@ Test 1
     demandeur.Vérifier que le profile demandeur est selectionne
     demandeur.Creer nouvelle demande
     demandeur.Renseigner la description du projet
+    demandeur.Renseigner l'implantation
+    demandeur.Renseigner Info Complementaire
+    demandeur.Premier submit
+    demandeur.Ajout materiel
+    demandeur.Renseigner Info materiel
+    demandeur.Deposer Demande
