@@ -10,7 +10,6 @@ Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
     sleep   10s
 #    popup
-    Click Element   xpath=/html/body/div[2]/div[4]/div[2]/input
     Click Element   xpath=/html/body/div[2]/div[4]/div[1]/div
 
 selectionner le projet avec le status Déposée

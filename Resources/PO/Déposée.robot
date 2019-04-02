@@ -13,13 +13,9 @@ Prendre en compte la demande
 
 Accueil DIF
     Deposee_ressource.aller dans accueil
-
     Deposee_ressource.Prise en compte
-
     Deposee_ressource.Datacenter retenue
-
     Deposee_ressource.Objet Demande Nouveu materiel
-
     Deposee_ressource.Info accueil
 
 Valider demande
