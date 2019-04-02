@@ -4,11 +4,10 @@ Resource  Deposee_ressource.robot
 *** Variables ***
 
 *** Keywords ***
-Charger La page
-    Deposee_ressource.Charger La page
-    Deposee_ressource.Verifier que la page est bien charge
 
 Prendre en compte la demande
+    Deposee_ressource.Charger La page d'accueil
+    Deposee_ressource.Verifier que la page est bien charge
     Deposee_ressource.selectionne le projet avec le status Déposée
     Deposee_ressource.clicker sur action
 

@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Resource  ../variables.robot
 
 *** Keywords ***
-Charger La page
+Charger La page d'accueil
     Go To  ${WEBSITE_Accueil}
 
 Verifier que la page est bien charge
