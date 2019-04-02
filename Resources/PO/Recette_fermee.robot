@@ -2,7 +2,7 @@
 Resource  ../variables.robot
 Resource  Réalisation_ressource.robot
 
-*** Keywords ***
+*** test cases ***
 
 Recette
     Réalisation_ressource.Recette En cour
