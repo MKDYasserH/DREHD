@@ -8,7 +8,7 @@ Suite Teardown  common.End Web Test
 
 *** Test Cases ***
 Test 1
-    [Tags]  First
+    [Tags]  1
     demandeur.Acceder Au Site
 
     demandeur.Choisir Profil Demandeur
@@ -23,7 +23,7 @@ Test 1
 
 
 Test 2
-    [Tags]  Current
+    [Tags]  3
     urbaniste.Acceder Au Site Avec Compte Urbaniste
 
     urbaniste.Rechercher Demande
