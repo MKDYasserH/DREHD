@@ -1,12 +1,15 @@
 *** Settings ***
+Resource  ../Resources/PO/déposée.robot
 Resource  ../Resources/PO/demandeur.robot
+Resource  ../Resources/PO/Réalisation.robot
 Resource  ../Resources/common.robot
 
 Suite Setup  common.Begin Web Test
 Suite Teardown  common.End Web Test
 
 *** Test Cases ***
-Test 1
+Saisie de la demande En Création
+    [Tags]    1
     demandeur.Charger La page
     demandeur.Verifier que la page est bien charge
     demandeur.Choisir le profile
@@ -19,3 +22,16 @@ Test 1
     demandeur.Ajout materiel
     demandeur.Renseigner Info materiel
     demandeur.Deposer Demande
+
+Déposée Prise En Compte
+    [Tags]    2
+    déposée.Charger La page
+    déposée.Prendre en compte la demande
+    déposée.Accueil DIF
+    déposée.Valider demande
+
+Réalisation
+    [Tags]    4
+    Réalisation.Prendre en compte la demande
+    Réalisation.Urbanisation-réalisation
+    Réalisation.IHM pilotage
