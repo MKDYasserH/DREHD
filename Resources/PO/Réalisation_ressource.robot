@@ -77,11 +77,12 @@ Enregistrer
 
 
 Recette En cour
-    Select From List By Value   /html/body/main/div/form/div[3]/div[3]/div/div/div[1]/div/select    en_cours
+    Execute JavaScript    window.scrollTo(1000, 1000);
+    Select From List By Value   //select[@name="statut_recette"]     en_cours
     Input Text  name=date_fin_prev_recette  02/04/2019
 
 Recette OK
-    Select From List By Value   /html/body/main/div/form/div[3]/div[3]/div/div/div[1]/div/select    ok
+    Select From List By Value   //select[@name="statut_recette"]    ok
     Input Text  name=date_fin_prev_recette  02/04/2019
 
 Cloturer

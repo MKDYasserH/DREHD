@@ -7,7 +7,7 @@ Resource  ../variables.robot
 *** Keywords ***
 Charger La Page
     Go To  ${WEBSITE_URBANISTE}
-    sleep  3s
+    sleep  10s
     Click Element  xpath=/html/body/div[2]/div[4]/div[1]/div
     Wait Until Page Contains  Liste des demandes
 
@@ -33,6 +33,7 @@ Etude
     Click Element  xpath=//*[@id="etudes_mener"]/div/label[1]/input
     Wait Until Page Contains  A lancer
     Select From List By Value  xpath=//*[@id="etudes_emplacement"]  ok
+    Execute JavaScript    window.scrollTo(1000, 1000);
     Click Element  xpath=//*[@id="etudes_emplacement_date_fin"]
     Click Element  xpath=/html/body/div[3]/div[1]/table/tbody/tr[2]/td[1]
     Click Element  xpath=//*[@id="date_fin_trav_infr_prev"]

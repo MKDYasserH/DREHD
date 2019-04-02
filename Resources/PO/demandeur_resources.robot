@@ -6,7 +6,7 @@ Resource  ../variables.robot
 Charger La page
     Go To  ${WEBSITE_URL}
 
-    sleep  3s
+    sleep  10s
 
     Click Element  xpath=/html/body/div[2]/div[4]/div[1]/div
 Verifier que la page est bien charge

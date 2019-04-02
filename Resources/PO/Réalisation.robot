@@ -24,3 +24,13 @@ IHM pilotage
     Réalisation_ressource.Jarretièrage
     Réalisation_ressource.Enregistrer
 
+Recette
+    Réalisation_ressource.Recette En cour
+    Réalisation_ressource.Enregistrer
+    Réalisation_ressource.Recette OK
+    Réalisation_ressource.Enregistrer
+
+Cloturer
+    Réalisation_ressource.Cloturer
+
+
