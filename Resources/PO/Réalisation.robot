@@ -22,4 +22,5 @@ IHM pilotage
     Réalisation_ressource.Enregistrer pilotage
     Réalisation_ressource.Rackage
     Réalisation_ressource.Jarretièrage
-    Réalisation_ressource.Enregistrer réalisation
+    Réalisation_ressource.Enregistrer
+

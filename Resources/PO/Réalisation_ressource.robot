@@ -72,6 +72,19 @@ Jarretièrage
     Click Element   xpath=/html/body/main/div/form/div[2]/div[3]/div/div/div[1]/div/input[1]
     Click Element    xpath=/html/body/div[3]/div[1]/table/tbody/tr[4]/td[3]
 
-Enregistrer Réalisation
+Enregistrer
     Execute JavaScript    window.scrollTo(1000, 1000);
     Click Element   xpath=/html/body/main/div/form/input[2]
+
+
+Recette En cour
+    Select From List By Value   /html/body/main/div/form/div[3]/div[3]/div/div/div[1]/div/select    en_cours
+    Input Text  name=date_fin_prev_recette  02/04/2019
+
+Recette OK
+    Select From List By Value   /html/body/main/div/form/div[3]/div[3]/div/div/div[1]/div/select    ok
+    Input Text  name=date_fin_prev_recette  02/04/2019
+
+Cloturer
+    Execute JavaScript    window.scrollTo(1000, 1000);
+    Click Element   xpath=/html/body/main/div/form/a[2]
