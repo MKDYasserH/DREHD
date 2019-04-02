@@ -19,7 +19,7 @@ Rechercher Demande en etude
 
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input
 
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ProjetTestT 1
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ${INTITULE_PROJET}
 
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[8]/input
 
@@ -77,7 +77,7 @@ Verifier Fin Etude
 
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input
 
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ProjetTestT 1
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ${INTITULE_PROJET}
 
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[8]/input
 

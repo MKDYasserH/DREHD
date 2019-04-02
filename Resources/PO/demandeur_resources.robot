@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 Resource  ../variables.robot
 *** Variables ***
-${Number}=  ${0}
 *** Keywords ***
 Charger La page
     Go To  ${WEBSITE_URL}
@@ -35,7 +34,6 @@ Creer nouvelle demande
     Wait Until Page Contains  Edition de la demande
 
 Renseigner la description du projet
-    ${Number} =  Set Variable  ${Number + 1}
 
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select
 
@@ -64,7 +62,7 @@ Renseigner la description du projet
     Clear Element Text  name=projet
 
 
-    Input Text  name=projet  ${INTITULE_PROJET} ${Number}
+    Input Text  name=projet  ${INTITULE_PROJET}
 
 
     Clear Element Text   name=desc_demande
