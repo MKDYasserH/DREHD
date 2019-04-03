@@ -13,8 +13,9 @@ Choisir Profil Demandeur
     demandeur_resources.Vérifier que le profile demandeur est selectionne
 
 Creation d'une demande
+    [Arguments]  ${number}
     demandeur_resources.Creer nouvelle demande
-    demandeur_resources.Renseigner la description du projet
+    demandeur_resources.Renseigner la description du projet  ${number}
     demandeur_resources.Renseigner l'implantation
     demandeur_resources.Renseigner Info Complementaire
 
@@ -24,6 +25,9 @@ Enregistrer Les Informations
 Ajouter Nouveau Materiel
     demandeur_resources.Ajout materiel
     demandeur_resources.Renseigner Info materiel
+
+Detail Cablage
+    demandeur_resources.Renseigner Info cablage
 
 Soumettre Sa demande
     demandeur_resources.Deposer Demande

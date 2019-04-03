@@ -16,6 +16,7 @@ Demandeur/ Saisie de la demande En Création
     demandeur.Creation d'une demande    ${number}
     demandeur.Enregistrer Les Informations
     demandeur.Ajouter Nouveau Materiel
+    demandeur.Detail Cablage
     demandeur.Soumettre Sa demande
 
 Déposée Prise En Compte

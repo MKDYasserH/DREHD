@@ -26,10 +26,11 @@ Creer nouvelle demande
     Wait Until Page Contains  Edition de la demande
 
 Renseigner la description du projet
+    [Arguments]  ${number}
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select/option[2]
-    Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[4]/select
-    Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[4]/select/option[2]
+#    Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[4]/select
+    Select From List By Value  //select[@name="objet_demande"]  ${number}
     Clear Element Text  name=date_livraison
     Input Text  name=date_livraison  ${DATE_PROJET}
     Click Element  name=date_fin_souhaitee
@@ -78,6 +79,22 @@ Renseigner Info materiel
     Input Text  name=nbre_alimentation  5
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Click Button  id=bt_save_materiel
+
+Renseigner Info cablage
+    Wait Until Page Contains  Liste de Matériel
+    Click Link  xpath=/html/body/main/div/div[5]/div/table/tbody/tr/td[12]/a[3]
+    Wait Until Page Contains  Edition du cablage
+    Click Button  id=addLigne
+    Wait Until Page Contains  Traiter une ligne de cablage
+    Wait Until Page Contains  Nombre
+    sleep  1s
+    Input Text    //input[@name="nombre"]    5
+    sleep  1s
+    Input Text    //input[@name="destination"]    destination
+    Click Element    //button[@id="enregistrer-ligne"]
+    Wait Until Page Contains  LAN
+    sleep  2s
+    Click Link  xpath=//*[@id="send"]
 
 Deposer Demande
     Click Link  xpath=/html/body/main/div/a[1]
