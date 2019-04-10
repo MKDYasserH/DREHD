@@ -4,7 +4,7 @@ Resource  ../variables.robot
 
 *** Keywords ***
 Charger La page de Pilotage
-    Go To  ${WEBSITE_Pilote}
+    Go To  ${WEBSITE_URBANISTE}
 
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
