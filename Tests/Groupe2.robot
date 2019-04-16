@@ -13,7 +13,7 @@ Demandeur/ Saisie de la demande En Création
     [Tags]  1
     demandeur.Acceder Au Site
     demandeur.Choisir Profil Demandeur
-    demandeur.Creation d'une demande    ${number}
+    demandeur.Creation d'une demande    5
     demandeur.Enregistrer Les Informations
     demandeur.Ajouter Nouveau Materiel
     demandeur.Soumettre Sa demande
@@ -24,24 +24,12 @@ Déposée Prise En Compte
     Déposée.Accueil DIF
     Déposée.Valider demande
 
-Etude
-    [Tags]  3
-    urbaniste.Acceder Au Site Avec Compte Urbaniste
-    urbaniste.Rechercher Demande
-    urbaniste.Renseigner Info Dif
-    urbaniste.Remplir La Fiche Etude
-    urbaniste.Verifier Statut Projet
-
+#
 Réalisation
     [Tags]  4
-    Réalisation.Prendre en compte la demande
-    Réalisation.Urbanisation-réalisation
-    Réalisation.IHM pilotage
-    Réalisation.Recette
-    Réalisation.Cloturer
+    Réalisation.Prendre en compte la demande avec profil Pilote
+    Réalisation.Livraison Stockage
 
-
-
-
-
-
+RECETTE FERMEE
+     [Tags]  5
+     Réalisation.Cloturer

@@ -6,8 +6,8 @@ Resource  ../variables.robot
 Charger La page
     Go To  ${WEBSITE_URL}
 
-    sleep  10s
-
+    sleep  2s
+    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
     Click Element  xpath=/html/body/div[2]/div[4]/div[1]/div
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile

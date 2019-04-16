@@ -4,12 +4,16 @@ Resource  ../variables.robot
 
 *** Keywords ***
 Charger La page de Pilotage
+    Go To  ${WEBSITE_Pilote}
+
+Charger La page d'urbaniste
     Go To  ${WEBSITE_URBANISTE}
 
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
-    sleep   10s
+    sleep  2s
 #    popup
+    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
     Click Element   xpath=/html/body/div[2]/div[4]/div[1]/div
 
 selectionner le projet avec le status Déposée
@@ -44,37 +48,36 @@ Enregistrer travaux
     Click Element   xpath=//*[@id="travaux"]/div/input[1]
 
 Aller dans Pilotage
-    Click Element   xpath=/html/body/main/div/a[7]
-
-    Execute JavaScript    window.scrollTo(1000, 1000);
+    Wait Until Page Contains Element   xpath=//a[.='Pilotage']  10s
+    Click Element   xpath=//a[.='Pilotage']
 
 Livraison Réception
+    Execute JavaScript    window.scrollTo(1000, 1000);
+    #ok
     Select From List By Value    //select[@name="statut_livr_recption"]    ok
-    Click Element    xpath=/html/body/main/div/form/div[3]/div[1]/div/div/div[1]/div/input
-    Click Element    xpath=/html/body/div[3]/div[1]/table/tbody/tr[3]/td[4]
+    #date
+    Input Text   xpath://input[@name='date_fin_livr_reception']  12/04/2019
 
 Autres SWAN
+    Execute JavaScript    window.scrollTo(1000, 1000);
+
     Select From List By Value    //select[@name="statut_autre_swan"]    ok
-    Click Element   xpath=/html/body/main/div/form/div[3]/div[2]/div/div/div[1]/div/input[1]
-    Click Element    xpath=/html/body/div[3]/div[1]/table/tbody/tr[4]/td[4]
+
+    Input Text  xpath://input[@name='date_fin_prev_autre_swan']  13/04/2019
 
 Enregistrer pilotage
-    Click Element   xpath=/html/body/main/div/form/input[2]
+    Execute JavaScript    window.scrollTo(1000, 1000);
+    Click Element   xpath=//input[@name='save']
 
 Rackage
     Select From List By Value    //select[@name="statut_rackage"]    ok
-    Click Element   xpath=/html/body/main/div/form/div[2]/div[2]/div/div/div[1]/div/input[1]
-    Click Element    xpath=/html/body/div[3]/div[1]/table/tbody/tr[2]/td[3]
+
+    Input Text  xpath://input[@name='date_fin_prev_rackage']    13/04/2019
 
 Jarretièrage
     Select From List By Value    //select[@name="statut_jarretierage"]    ok
-    Click Element   xpath=/html/body/main/div/form/div[2]/div[3]/div/div/div[1]/div/input[1]
-    Click Element    xpath=/html/body/div[3]/div[1]/table/tbody/tr[4]/td[3]
 
-Enregistrer
-    Execute JavaScript    window.scrollTo(1000, 1000);
-    Click Element   xpath=/html/body/main/div/form/input[2]
-
+    Input Text  xpath://input[@name='date_fin_prev_jarretierage']   13/04/2019
 
 Recette En cour
     Execute JavaScript    window.scrollTo(1000, 1000);
@@ -82,8 +85,10 @@ Recette En cour
     Input Text  name=date_fin_prev_recette  02/04/2019
 
 Recette OK
+    Execute JavaScript    window.scrollTo(1000, 1000);
+
     Select From List By Value   //select[@name="statut_recette"]    ok
-    Input Text  name=date_fin_prev_recette  02/04/2019
+    Input Text  xpath://input[@name='date_fin_prev_recette']  02/04/2019
 
 Cloturer
     Execute JavaScript    window.scrollTo(1000, 1000);

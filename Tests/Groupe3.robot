@@ -13,9 +13,10 @@ Demandeur/ Saisie de la demande En Création
     [Tags]  1
     demandeur.Acceder Au Site
     demandeur.Choisir Profil Demandeur
-    demandeur.Creation d'une demande    ${number}
+    demandeur.Creation d'une demande    1
     demandeur.Enregistrer Les Informations
     demandeur.Ajouter Nouveau Materiel
+    demandeur.Detail Cablage
     demandeur.Soumettre Sa demande
 
 Déposée Prise En Compte
@@ -31,17 +32,16 @@ Etude
     urbaniste.Renseigner Info Dif
     urbaniste.Remplir La Fiche Etude
     urbaniste.Verifier Statut Projet
-
+#
 Réalisation
     [Tags]  4
-    Réalisation.Prendre en compte la demande
+    Prendre en compte la demande avec profil Urbaniste
     Réalisation.Urbanisation-réalisation
-    Réalisation.IHM pilotage
-    Réalisation.Recette
-    Réalisation.Cloturer
+    Réalisation.Prendre en compte la demande avec profil Pilote
+    Réalisation.Livraison Stockage
+    Réalisation.Rackage/Câblage/Autres SWANs
 
-
-
-
-
-
+RECETTE FERMEE
+     [Tags]  5
+     Réalisation.Recette
+     Réalisation.Cloturer
