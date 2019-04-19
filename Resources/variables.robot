@@ -1,6 +1,6 @@
 *** Variables ***
 ########   Common Variables   ########
-${BROWSER} =  ff
+${BROWSER} =  chrome
 ${WEBSITE_URL} =  http://dv0bywsc05.rouen.francetelecom.fr/debug.php/api/auth/login?cuid=SD43433
 ${WEBSITE_Accueil} =  http://dv0bywsc05.rouen.francetelecom.fr/debug.php/api/auth/login?cuid=qezezezec
 ${WEBSITE_Pilote} =  http://dv0bywsc05.rouen.francetelecom.fr/debug.php/api/auth/login?cuid=wsaz13q
@@ -10,5 +10,5 @@ ${DEMANDEUR} =  Demandeur
 ${ACCUEIL} =  Accueil
 ${URBANISTE} =  Urbaniste
 ${DATE_PROJET} =  28/03/2019
-${INTITULE_PROJET} =  Projetfirefox
+${INTITULE_PROJET} =  Projet9/04/2019.10:38
 ${DESCRIPTION_PROJET} =   Description projet
