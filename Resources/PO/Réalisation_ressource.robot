@@ -8,6 +8,9 @@ Charger La page de Pilotage
 
 Charger La page d'urbaniste
     Go To  ${WEBSITE_URBANISTE}
+#effacer filtre
+    Click Element   xpath=//a[contains(.,'Affiner le filtre')]
+    Click Element   xpath=//a[.='Effacer le filtre']
 
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile

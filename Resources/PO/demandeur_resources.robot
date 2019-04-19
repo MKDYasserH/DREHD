@@ -82,7 +82,7 @@ Renseigner Info materiel
 
 Renseigner Info cablage
     Wait Until Page Contains  Liste de Matériel
-    Click Link  xpath=/html/body/main/div/div[5]/div/table/tbody/tr/td[12]/a[3]
+    Click Link  xpath=//*[@id="table_icons"]/tbody/tr/td[3]/a
     Wait Until Page Contains  Edition du cablage
     Click Button  id=addLigne
     Wait Until Page Contains  Traiter une ligne de cablage
