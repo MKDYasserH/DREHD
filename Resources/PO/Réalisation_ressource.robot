@@ -49,7 +49,7 @@ Suivi travaux
 Enregistrer travaux
     Execute JavaScript    window.scrollTo(1000, 1000);
     Click Element   xpath=//*[@id="travaux"]/div/input[1]
-
+    Execute JavaScript    window.scrollTo(1000, 1000);
 Aller dans Pilotage
     Wait Until Page Contains Element   xpath=//a[.='Pilotage']  10s
     Click Element   xpath=//a[.='Pilotage']
