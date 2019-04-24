@@ -5,7 +5,6 @@ Resource  ../variables.robot
 *** Keywords ***
 Charger La page d'accueil
     Go To  ${WEBSITE_Accueil}
-
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
 #    popup
