@@ -12,7 +12,7 @@ Suite Teardown  common.End Web Test
 Demandeur/ Saisie de la demande En Création
     [Tags]  1
     demandeur.Acceder Au Site
-    demandeur.Choisir Profil Demandeur
+#    demandeur.Choisir Profil Demandeur
     demandeur.Creation d'une demande    1
     demandeur.Enregistrer Les Informations
     demandeur.Ajouter Nouveau Materiel
@@ -32,7 +32,7 @@ Etude
     urbaniste.Renseigner Info Dif
     urbaniste.Remplir La Fiche Etude
     urbaniste.Verifier Statut Projet
-#
+
 Réalisation
     [Tags]  4
     Prendre en compte la demande avec profil Urbaniste
