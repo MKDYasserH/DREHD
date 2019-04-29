@@ -1,40 +1,41 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../variables.robot
-Resource  ../common.robot
+Resource  ../commun.robot
 
 *** Keywords ***
 Charger La page de Pilotage
     Go To  ${WEBSITE_Pilote}
-    common.Fermer fenetre
+    commun.Fermer fenetre
 Charger La page d'urbaniste
     Go To  ${WEBSITE_URBANISTE}
-    common.Fermer fenetre
+    commun.Fermer fenetre
     Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
 #effacer filtre
-#    common.Fermer fenetre
+#    commun.Fermer fenetre
 #    Wait Until Page Contains Element  xpath=//a[contains(.,'Affiner le filtre')]  50s
-#    common.Fermer fenetre
+#    commun.Fermer fenetre
 #    Click Link   xpath=//a[contains(.,'Affiner le filtre')]
-#    common.Fermer fenetre
+#    commun.Fermer fenetre
 #    Wait Until Page Contains Element  xpath=//a[.='Effacer le filtre']  50s
-#    common.Fermer fenetre
+#    commun.Fermer fenetre
 #    Click Link   xpath=//a[.='Effacer le filtre']
-#    common.Fermer fenetre
+#    commun.Fermer fenetre
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
 #    popup
     sleep  2s
-    common.Fermer Fenetre
+    commun.Fermer Fenetre
 #effacer filtre
     Click Element   xpath=//a[contains(.,'Affiner le filtre')]
     Click Element   xpath=//a[.='Effacer le filtre']
 #    popup
     sleep  2s
-    common.Fermer Fenetre
+    commun.Fermer Fenetre
 
 selectionner le projet avec le status Déposée
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${INTITULE_PROJET}
+    [Arguments]  ${dateTime}
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${dateTime}
     Sleep   3s
 
 Clicker sur action

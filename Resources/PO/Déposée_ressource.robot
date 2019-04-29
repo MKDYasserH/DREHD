@@ -20,7 +20,8 @@ Verifier que la page est bien charge
     Click Element   xpath=/html/body/div[2]/div[4]/div[1]/div
 
 selectionne le projet avec le status Déposée
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${INTITULE_PROJET}
+    [Arguments]  ${dateTime}
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${dateTime}
     Sleep   3s
 
 Clicker sur action
@@ -34,23 +35,23 @@ Prise en compte
     Click Element   xpath=//*[@id="prise_en_compte"]
 
 Datacenter retenue
-    Select From List By Value   xpath=/html/body/main/div/form/div[1]/div[2]/div/div/div[2]/select  1
-
-Objet Demande Nouveu materiel
-    Select From List By Value   xpath=/html/body/main/div/form/div[1]/div[2]/div/div/div[4]/select  1
+    Select From List By Value   xpath=//select[@name='datacenter_retenu']  1
 
 Info accueil
-    Select From List By Value   xpath=/html/body/main/div/form/div[1]/div[3]/div/div/div[1]/div/div/div[1]/select  ok
+#Vérification Accueil
+    Select From List By Value   xpath=//select[@name='statut_verif_accueil']  ok
     Input Text  name=date_verif_accueil  22/03/2019
-    Select From List By Value   xpath=/html/body/main/div/form/div[1]/div[3]/div/div/div[2]/div/div/div[1]/select  ok
+#Etude capacitaire Datacenter
+    Select From List By Value   xpath=//select[@name='statut_etude_capacitaire']  ok
     Input Text  name=date_etude_capacitaire  26/03/2019
-    Select From List By Value   xpath=/html/body/main/div/form/div[1]/div[3]/div/div/div[2]/div/div/div[3]/select  allprofil
+#Responsable
+    Select From List By Value   xpath=//select[@name='responsable']  allprofil
 
 Clicker sur Enregistrer
     Execute JavaScript    window.scrollTo(1000, 1000);
     Click Element   xpath=/html/body/main/div/form/input[3]
 
 Etape Suivante
-    Click Element   xpath=/html/body/main/div/form/div[1]/div[3]/div/div/div[3]/div/div[2]/a[2]
+    Click Element   xpath=//a[.='Etape suivante']
 
 
