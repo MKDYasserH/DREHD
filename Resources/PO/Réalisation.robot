@@ -4,18 +4,20 @@ Resource  Réalisation_ressource.robot
 
 *** Keywords ***
 Prendre en compte la demande avec profil Pilote
+    [Arguments]  ${dateTime}
     Réalisation_ressource.Charger La page de Pilotage
 #    Réalisation_ressource.effacer filtre
     Réalisation_ressource.Verifier que la page est bien charge
-    Réalisation_ressource.selectionner le projet avec le status Déposée
+    Réalisation_ressource.selectionner le projet avec le status Déposée  ${dateTime}
     Réalisation_ressource.Clicker sur action
     Réalisation_ressource.Aller dans Pilotage
 
 Prendre en compte la demande avec profil Urbaniste
+    [Arguments]  ${dateTime}
     Réalisation_ressource.Charger La page d'urbaniste
 #    Réalisation_ressource.effacer filtre
     Réalisation_ressource.Verifier que la page est bien charge
-    Réalisation_ressource.selectionner le projet avec le status Déposée
+    Réalisation_ressource.selectionner le projet avec le status Déposée  ${dateTime}
     Réalisation_ressource.Clicker sur action
     Réalisation_ressource.Aller dans Travaux salle
 

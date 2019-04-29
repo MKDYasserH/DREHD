@@ -1,35 +1,44 @@
 *** Settings ***
-Resource  ../Resources/PO/demandeur.robot
-Resource  ../Resources/PO/urbaniste.robot
+Resource  ../Resources/PO/Création.robot
+Resource  ../Resources/PO/Etude.robot
 Resource  ../Resources/PO/Déposée.robot
 Resource  ../Resources/PO/Réalisation.robot
-Resource  ../Resources/common.robot
+Resource  ../Resources/commun.robot
+Library           DateTime
 
-Suite Setup  common.Begin Web Test
-Suite Teardown  common.End Web Test
-*** Variables ***
+Suite Setup  Run Keywords   commun.Begin Web Test   Get DateTime
+Suite Teardown  commun.End Web Test
+
+*** Keywords ***
+Get DateTime
+    ${dateTime}=   Get Current Date
+    Set Suite Variable	${dateTime}
+
 *** Test Cases ***
 Demandeur/ Saisie de la demande En Création
     [Tags]  1
-    demandeur.Acceder Au Site
-    demandeur.Choisir Profil Demandeur
-    demandeur.Creation d'une demande    5
-    demandeur.Enregistrer Les Informations
-    demandeur.Ajouter Nouveau Materiel
-    demandeur.Soumettre Sa demande
+    Création.Acceder Au Site
+    Création.Creation d'une demande    Livraison pour stock  ${dateTime}
+    Création.Enregistrer Les Informations
+    Création.Ajouter Nouveau Materiel
+#    Création.Detail Cablage
+    Création.Soumettre Sa demande
 
 Déposée Prise En Compte
     [Tags]  2
-    Déposée.Prendre en compte la demande
+    Déposée.Prendre en compte la demande    ${dateTime}
     Déposée.Accueil DIF
     Déposée.Valider demande
 
-#
 Réalisation
     [Tags]  4
-    Réalisation.Prendre en compte la demande avec profil Pilote
+#    Prendre en compte la demande avec profil Urbaniste
+#    Réalisation.Urbanisation-réalisation
+    Réalisation.Prendre en compte la demande avec profil Pilote  ${dateTime}
     Réalisation.Livraison Stockage
+#    Réalisation.Rackage/Câblage/Autres SWANs
 
 RECETTE FERMEE
-     [Tags]  5
-     Réalisation.Cloturer
+    [Tags]  5
+#    Réalisation.Recette
+    Réalisation.Cloturer

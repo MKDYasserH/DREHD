@@ -5,10 +5,10 @@ Resource  ../variables.robot
 *** Keywords ***
 Charger La page
     Go To  ${WEBSITE_URL}
-
     sleep  2s
     Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
     Click Element  xpath=/html/body/div[2]/div[4]/div[1]/div
+
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
 
@@ -26,34 +26,34 @@ Creer nouvelle demande
     Wait Until Page Contains  Edition de la demande
 
 Renseigner la description du projet
-    [Arguments]  ${number}
+    [Arguments]  ${number}  ${DateTime}
+    #Entité hébergée*
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select/option[2]
-#    Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[4]/select
-    Select From List By Value  //select[@name="objet_demande"]  ${number}
+    #Objet demande*
+    Select From List By Label  xpath=//select[@name='objet_demande']  ${number}
+    #Date livraison Prévue*
     Clear Element Text  name=date_livraison
     Input Text  name=date_livraison  ${DATE_PROJET}
+    #Date fin souhaitée*
     Click Element  name=date_fin_souhaitee
     Click Element  xpath=/html/body/div[3]/div[1]/table/tbody/tr[5]/td[5]
+    #Projet*
     Clear Element Text  name=projet
-    Input Text  name=projet  ${INTITULE_PROJET}
+    Input Text  name=projet  ${DateTime}
+    #Descriptif de la demande*
     Clear Element Text   name=desc_demande
     Input Text   name=desc_demande  ${DESCRIPTION_PROJET}
 
 Renseigner l'implantation
-
-#    Click Element  xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select
-#
-#    Page Should Contain Element    xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select/option[1]
-#
-#    Click Element  xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select/option[2]
-    Select From List By Value  xpath=/html/body/main/div/form/div/div[1]/div[3]/div/div[1]/div/div[2]/select  1
+    #Datacenter*
+    Select From List By Label  xpath=//select[@name='datacenter']  NORMANDIE OREE
 
 Renseigner Info Complementaire
-    Click Element  xpath=/html/body/main/div/form/div/div[2]/div[1]/div[2]/div/div/div[2]/select
-    Click Element  xpath=/html/body/main/div/form/div/div[2]/div[1]/div[2]/div/div/div[2]/select/option[2]
-    Click Element  xpath=/html/body/main/div/form/div/div[2]/div[1]/div[2]/div/div/div[4]/select
-    Click Element  xpath=/html/body/main/div/form/div/div[2]/div[1]/div[2]/div/div/div[4]/select/option[2]
+    #Infrastructure*
+    Select From List By Label  xpath=//select[@name='infra']    GW HORS PROD 1
+    #Responsable Patrimonial
+    Select From List By Label  xpath=//select[@name='responsable_patrimonial']    /Orange/Fictif/Externe/
 
 Premier submit
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
@@ -61,15 +61,18 @@ Premier submit
     Wait Until Page Contains  L'élément a été créé avec succès
 
 Ajout materiel
-    Click Link  xpath=/html/body/main/div/a[2]
+    #Clicker sur label Matériel
+    Click Link  xpath=//a[.='Matériel']
     Wait Until Page Contains  Liste de Matériel
-    Click Link  xpath=/html/body/main/div/div[5]/div[2]/a
-
+    #Clicker sur ajouter
+    Click Link  xpath=//a[.='Ajouter']
     Wait Until Page Contains  Détails Matériel
 
 Renseigner Info materiel
+    #Cat.*
     Select From List By Value  xpath=//*[@id="categorie"]  Accessoires de Baie
     Wait Until Page Contains  FRANCE TELECOM
+    #Constr.*
     Select From List By Value  xpath=//*[@id="contsructeur"]  FRANCE TELECOM
     Wait Until Page Contains  MECANO
     Select From List By Value  xpath=//*[@id="reference"]  MECANO
@@ -80,6 +83,17 @@ Renseigner Info materiel
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Click Button  id=bt_save_materiel
 
+Renseigner Info materiel existant
+    #Chercher par code 26E
+    Input Text  xpath=//div[@id='sm_recherche_unitaire']//div[3]/input[1]   0000554518
+    Click Element   xpath=//img[@id='sm_imnums_equipement_exist']
+    #Type de mouvement
+    Select From List By Label  xpath=//select[@id='sm_type_movement']   J-CAT Sortie de salle
+    Input Text  xpath=//textarea[@id='sm_commentaire']  commentaire
+    #Clicker sur enregistrer
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Wait Until Page Contains Element    xpath=//button[@id='sm_save_materiel']  15s
+    Wait Until Keyword Succeeds  50s    5s  Click Element    xpath=//button[@id='sm_save_materiel']
 Renseigner Info cablage
     Wait Until Page Contains  Liste de Matériel
     Click Link  xpath=//*[@id="table_icons"]/tbody/tr/td[3]/a
