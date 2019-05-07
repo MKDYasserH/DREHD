@@ -26,7 +26,7 @@ Creer nouvelle demande
     Wait Until Page Contains  Edition de la demande
 
 Renseigner la description du projet
-    [Arguments]  ${number}  ${DateTime}
+    [Arguments]  ${number}  ${INTITULE_PROJET}
     #Entité hébergée*
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select
     Click Element  xpath=//*[@id="projet"]/div/div[1]/div/div[2]/select/option[2]
@@ -40,7 +40,7 @@ Renseigner la description du projet
     Click Element  xpath=/html/body/div[3]/div[1]/table/tbody/tr[5]/td[5]
     #Projet*
     Clear Element Text  name=projet
-    Input Text  name=projet  ${DateTime}
+    Input Text  name=projet  ${INTITULE_PROJET}
     #Descriptif de la demande*
     Clear Element Text   name=desc_demande
     Input Text   name=desc_demande  ${DESCRIPTION_PROJET}

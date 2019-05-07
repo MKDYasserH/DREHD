@@ -20,8 +20,8 @@ Verifier que la page est bien charge
     Click Element   xpath=/html/body/div[2]/div[4]/div[1]/div
 
 selectionne le projet avec le status Déposée
-    [Arguments]  ${dateTime}
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${dateTime}
+    [Arguments]  ${INTITULE_PROJET}
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${INTITULE_PROJET}
     Sleep   3s
 
 Clicker sur action
