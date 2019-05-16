@@ -36,8 +36,7 @@ Renseigner la description du projet
     Clear Element Text  name=date_livraison
     Input Text  name=date_livraison  ${DATE_PROJET}
     #Date fin souhaitée*
-    Click Element  name=date_fin_souhaitee
-    Click Element  xpath=/html/body/div[3]/div[1]/table/tbody/tr[5]/td[5]
+    Input Text  name=date_fin_souhaitee  26/04/2019
     #Projet*
     Clear Element Text  name=projet
     Input Text  name=projet  ${INTITULE_PROJET}
@@ -71,13 +70,13 @@ Ajout materiel
 Renseigner Info materiel
     #Cat.*
     Select From List By Value  xpath=//*[@id="categorie"]  Accessoires de Baie
-    Wait Until Page Contains  FRANCE TELECOM
+    Wait Until Page Contains  FRANCE TELECOM    50s
     #Constr.*
     Select From List By Value  xpath=//*[@id="contsructeur"]  FRANCE TELECOM
-    Wait Until Page Contains  MECANO
-    Select From List By Value  xpath=//*[@id="reference"]  MECANO
-    Wait Until Page Contains  Plateau générique 19 pouces
+    Wait Until Page Contains  Plateau générique 19 pouces   50s
     Select From List By Value  xpath=//*[@id="modele"]  Plateau générique 19 pouces
+    Wait Until Page Contains  MECANO    50s
+    Select From List By Value  xpath=//*[@id="reference"]  MECANO
     Input Text  name=hostname_parent  hostname
     Input Text  name=nbre_alimentation  5
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)

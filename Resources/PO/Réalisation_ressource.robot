@@ -43,6 +43,7 @@ Clicker sur action
     Click Element   xpath=//*[@id="t_demandes"]/tbody/tr[1]/td[9]/a
 
 Aller dans Travaux salle
+    Sleep  3s
     Click Element   xpath=/html/body/main/div/a[6]
 
 Travaux à mener
@@ -53,7 +54,7 @@ Travaux à mener
 Suivi travaux
     Select From List By Value    //select[@name="travaux_cfo"]    ok
     Click Element    xpath=//*[@id="travaux_cfo_date_fin"]
-    Click Element    xpath=(//td[@class="day"])[2]
+    Click Element    xpath=(//td[@class="day"])[9]
     Select From List By Value    //select[@name="travaux_cfa"]    ok
     Click Element    xpath=//*[@id="travaux_cfa_date_fin"]
     Click Element    xpath=(//td[@class="day"])[6]
