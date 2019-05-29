@@ -1,5 +1,3 @@
-*** Settings ***
-Library           DateTime
 *** Variables ***
 ########   Common Variables   ########
 ${BROWSER} =  chrome
@@ -12,9 +10,6 @@ ${DEMANDEUR} =  Demandeur
 ${ACCUEIL} =  Accueil
 ${URBANISTE} =  Urbaniste
 ${DATE_PROJET} =  23/04/2019
-${INTITULE_PROJET} =  Projet26/04/2019/12/17
-${DESCRIPTION_PROJET} =   Description projet
-${INTITULE_PROJET} =	Run Keyword
 ${DESCRIPTION_PROJET}=  Description de projet
 
 

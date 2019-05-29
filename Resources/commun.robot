@@ -14,5 +14,5 @@ Fermer fenetre
     Run Keyword If    ${isvisible}    Clicker sur fermer
 
 Clicker sur fermer
-    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50sgit
+    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
     Click Element   xpath=/html/body/div[2]/div[4]/div[1]/div

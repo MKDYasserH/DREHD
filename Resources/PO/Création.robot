@@ -13,9 +13,9 @@ Choisir Profil Demandeur
     Création_ressources.Vérifier que le profile demandeur est selectionne
 
 Creation d'une demande
-    [Arguments]  ${numb}    ${DateTime}
+    [Arguments]  ${numb}    ${INTITULE_PROJET}
     Création_ressources.Creer nouvelle demande
-    Création_ressources.Renseigner la description du projet  ${numb}    ${DateTime}
+    Création_ressources.Renseigner la description du projet  ${numb}    ${INTITULE_PROJET}
     Création_ressources.Renseigner l'implantation
     Création_ressources.Renseigner Info Complementaire
 

@@ -10,7 +10,7 @@ Charger La page de Pilotage
 Charger La page d'urbaniste
     Go To  ${WEBSITE_URBANISTE}
     commun.Fermer fenetre
-    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
+#    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
 #effacer filtre
 #    commun.Fermer fenetre
 #    Wait Until Page Contains Element  xpath=//a[contains(.,'Affiner le filtre')]  50s
@@ -27,15 +27,15 @@ Verifier que la page est bien charge
     sleep  2s
     commun.Fermer Fenetre
 #effacer filtre
-    Click Element   xpath=//a[contains(.,'Affiner le filtre')]
-    Click Element   xpath=//a[.='Effacer le filtre']
+#    Click Element   xpath=//a[contains(.,'Affiner le filtre')]
+#    Click Element   xpath=//a[.='Effacer le filtre']
 #    popup
     sleep  2s
     commun.Fermer Fenetre
 
 selectionner le projet avec le status Déposée
-    [Arguments]  ${dateTime}
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${dateTime}
+    [Arguments]  ${INTITULE_PROJET}
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${INTITULE_PROJET}
     Sleep   3s
 
 Clicker sur action
@@ -43,6 +43,7 @@ Clicker sur action
     Click Element   xpath=//*[@id="t_demandes"]/tbody/tr[1]/td[9]/a
 
 Aller dans Travaux salle
+    Sleep  3s
     Click Element   xpath=/html/body/main/div/a[6]
 
 Travaux à mener
@@ -53,7 +54,7 @@ Travaux à mener
 Suivi travaux
     Select From List By Value    //select[@name="travaux_cfo"]    ok
     Click Element    xpath=//*[@id="travaux_cfo_date_fin"]
-    Click Element    xpath=(//td[@class="day"])[2]
+    Click Element    xpath=(//td[@class="day"])[9]
     Select From List By Value    //select[@name="travaux_cfa"]    ok
     Click Element    xpath=//*[@id="travaux_cfa_date_fin"]
     Click Element    xpath=(//td[@class="day"])[6]

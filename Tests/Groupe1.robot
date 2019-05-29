@@ -11,14 +11,14 @@ Suite Teardown  commun.End Web Test
 
 *** Keywords ***
 Get DateTime
-    ${dateTime}=   Get Current Date
-    Set Suite Variable	${dateTime}
+    ${INTITULE_PROJET}=   Get Current Date
+    Set Suite Variable	${INTITULE_PROJET}
 
 *** Test Cases ***
 Demandeur/ Saisie de la demande En Création
     [Tags]  1
     Création.Acceder Au Site
-    Création.Creation d'une demande    Nouveau matériel  ${dateTime}
+    Création.Creation d'une demande    Nouveau matériel  ${INTITULE_PROJET}
     Création.Enregistrer Les Informations
     Création.Ajouter Nouveau Materiel
     Création.Detail Cablage
@@ -26,23 +26,23 @@ Demandeur/ Saisie de la demande En Création
 
 Déposée Prise En Compte
     [Tags]  2
-    Déposée.Prendre en compte la demande    ${dateTime}
+    Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
     Déposée.Accueil DIF
     Déposée.Valider demande
 
 Etude
     [Tags]  3
     Etude.Acceder Au Site Avec Compte Urbaniste
-    Etude.Rechercher Demande    ${dateTime}
+    Etude.Rechercher Demande    ${INTITULE_PROJET}
     Etude.Renseigner Info Dif
     Etude.Remplir La Fiche Etude
-    Etude.Verifier Statut Projet
+    Etude.Verifier Statut Projet    ${INTITULE_PROJET}
 
 Réalisation
     [Tags]  4
-    Prendre en compte la demande avec profil Urbaniste  ${dateTime}
+    Prendre en compte la demande avec profil Urbaniste  ${INTITULE_PROJET}
     Réalisation.Urbanisation-réalisation
-    Réalisation.Prendre en compte la demande avec profil Pilote  ${dateTime}
+    Réalisation.Prendre en compte la demande avec profil Pilote  ${INTITULE_PROJET}
     Réalisation.Livraison Stockage
     Réalisation.Rackage/Câblage/Autres SWANs
 

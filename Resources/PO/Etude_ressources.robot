@@ -13,10 +13,10 @@ Charger La Page
     Wait Until Page Contains  Liste des demandes
 
 Rechercher Demande en etude
-    [Arguments]  ${dateTime}
+    [Arguments]  ${INTITULE_PROJET}
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ${dateTime}
+    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ${INTITULE_PROJET}
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[8]/input
     Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[8]/input  Etudes
     Execute JavaScript  window.scrollTo(1000, 1000)
@@ -49,6 +49,7 @@ Etude
     Wait Until Page Contains  Liste des demandes
 
 Verifier Fin Etude
+    [Arguments]  ${INTITULE_PROJET}
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input
     Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ${INTITULE_PROJET}
