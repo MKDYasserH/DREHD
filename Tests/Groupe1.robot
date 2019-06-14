@@ -6,7 +6,7 @@ Resource  ../Resources/PO/Réalisation.robot
 Resource  ../Resources/commun.robot
 Library           DateTime
 
-Suite Setup  Run Keywords   commun.Begin Web Test   Get DateTime
+Suite Setup  Run Keywords   commun.Begin Web Test  Get DateTime
 Suite Teardown  commun.End Web Test
 
 *** Keywords ***

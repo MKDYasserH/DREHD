@@ -96,7 +96,7 @@ Renseigner Info materiel existant
     Wait Until Keyword Succeeds  50s    5s  Click Element    xpath=//button[@id='sm_save_materiel']
 Renseigner Info cablage
     Wait Until Page Contains  Liste de Matériel
-    Click Link  xpath=/html/body/main/div/div[5]/div/table/tbody/tr/td[12]/a[3]
+    Click Image  xpath=//img[@src='/debug.php/assets/v3/drehdlib/images/icon2.png']
     Wait Until Page Contains  Edition du cablage
     Click Button  id=addLigne
     Wait Until Page Contains  Traiter une ligne de cablage

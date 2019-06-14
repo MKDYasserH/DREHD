@@ -11,16 +11,16 @@ Charger La page d'urbaniste
     Go To  ${WEBSITE_URBANISTE}
     commun.Fermer fenetre
 #    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
-#effacer filtre
-#    commun.Fermer fenetre
-#    Wait Until Page Contains Element  xpath=//a[contains(.,'Affiner le filtre')]  50s
-#    commun.Fermer fenetre
-#    Click Link   xpath=//a[contains(.,'Affiner le filtre')]
-#    commun.Fermer fenetre
-#    Wait Until Page Contains Element  xpath=//a[.='Effacer le filtre']  50s
-#    commun.Fermer fenetre
-#    Click Link   xpath=//a[.='Effacer le filtre']
-#    commun.Fermer fenetre
+effacer filtre
+    commun.Fermer fenetre
+    Wait Until Page Contains Element  xpath=//a[contains(.,'Affiner le filtre')]  50s
+    commun.Fermer fenetre
+    Click Link   xpath=//a[contains(.,'Affiner le filtre')]
+    commun.Fermer fenetre
+    Wait Until Page Contains Element  xpath=//a[.='Effacer le filtre']  50s
+    commun.Fermer fenetre
+    Click Link   xpath=//a[.='Effacer le filtre']
+    commun.Fermer fenetre
 Verifier que la page est bien charge
     Wait Until Page Contains  Choisir Le profile
 #    popup

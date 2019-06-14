@@ -6,6 +6,7 @@ Resource  Etude_ressources.robot
 *** Keywords ***
 Acceder Au Site Avec Compte Urbaniste
     Etude_ressources.Charger La Page
+    Etude_ressources.effacer filtre
 
 Rechercher Demande
     [Arguments]  ${INTITULE_PROJET}

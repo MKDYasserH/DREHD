@@ -14,3 +14,5 @@
 [0523/092428.876:ERROR:exception_snapshot_win.cc(98)] thread ID 9496 not found in process
 [0523/093507.528:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
 [0523/093507.574:ERROR:exception_snapshot_win.cc(98)] thread ID 10716 not found in process
+[0614/115334.094:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0614/115334.183:ERROR:exception_snapshot_win.cc(98)] thread ID 10716 not found in process

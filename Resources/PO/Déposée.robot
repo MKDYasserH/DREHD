@@ -9,6 +9,7 @@ Prendre en compte la demande
     [Arguments]  ${INTITULE_PROJET}
     Déposée_ressource.Charger La page d'accueil
     Déposée_ressource.Verifier que la page est bien charge
+    Déposée_ressource.effacer filtre
     Déposée_ressource.selectionne le projet avec le status Déposée  ${INTITULE_PROJET}
     Déposée_ressource.clicker sur action
 

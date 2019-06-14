@@ -10,9 +10,9 @@ Verifier que la page est bien charge
 #    popup
     sleep  2s
     commun.Fermer fenetre
-#effacer filtre
-#    Click Element   xpath=//a[contains(.,'Affiner le filtre')]
-#    Click Element   xpath=//a[.='Effacer le filtre']
+effacer filtre
+    Click Element   xpath=//a[contains(.,'Affiner le filtre')]
+    Click Element   xpath=//a[.='Effacer le filtre']
 #    popup
     sleep  2s
 #    Wait Until Page Contains Element  xpath=/html/body/div[2]/div[4]/div[1]/div  50s
