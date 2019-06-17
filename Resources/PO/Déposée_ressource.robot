@@ -55,4 +55,13 @@ Clicker sur Enregistrer
 Etape Suivante
     Click Element   xpath=//a[.='Etape suivante']
 
+Charger Page RA
+    Go To  ${WEBSITE_RA}
 
+Choisir Pilote
+    Execute JavaScript    window.scrollTo(1000, 1000);
+    Select From List By Value  xpath=//select[@name='pilote_deploiement']  vwtk7928
+
+Clicker sur Enregistrer RA
+    Execute JavaScript    window.scrollTo(1000, 1000);
+    Click Element   xpath=//input[@name='save']

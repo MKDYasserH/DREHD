@@ -28,6 +28,9 @@ Déposée Prise En Compte
     [Tags]  2
     Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
     Déposée.Accueil DIF
+    Déposée.Connecter RA  ${INTITULE_PROJET}
+    Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
+    Déposée.Accueil DIF 2
     Déposée.Valider demande
 
 Etude

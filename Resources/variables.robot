@@ -11,6 +11,6 @@ ${ACCUEIL} =  Accueil
 ${URBANISTE} =  Urbaniste
 ${DATE_PROJET} =  23/04/2019
 ${DESCRIPTION_PROJET}=  Description de projet
-
+${WEBSITE_RA} =  http://dv0bywsc05.rouen.francetelecom.fr/debug.php/api/auth/login?cuid=qxdsd
 
 
