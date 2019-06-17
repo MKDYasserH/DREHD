@@ -26,7 +26,7 @@ Demandeur/ Saisie de la demande En Création
 
 Déposée Prise En Compte
     [Tags]  2
-    Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
+    Déposée.Prendre en compte la demande    intitule_projet
     Déposée.Accueil DIF
     Déposée.Connecter RA  ${INTITULE_PROJET}
     Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
