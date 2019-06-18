@@ -111,6 +111,7 @@ Renseigner Info cablage
     Click Link  xpath=//*[@id="send"]
 
 Deposer Demande
+    Wait Until Page Contains Element  xpath=/html/body/main/div/a[1]
     Click Link  xpath=/html/body/main/div/a[1]
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Click Link  xpath=/html/body/main/div/form/a[2]
