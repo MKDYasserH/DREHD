@@ -21,8 +21,8 @@ effacer filtre
 
 
 selectionne le projet avec le status Déposée
-    [Arguments]  ${INTITULE_PROJET}
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${INTITULE_PROJET}
+#    [Arguments]  ${INTITULE_PROJET}
+    Input Text  xpath=//thead[@class='thead-default']//th[4]/input[1]    intitule_projet
     Sleep   3s
 
 Clicker sur action

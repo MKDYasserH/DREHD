@@ -35,7 +35,7 @@ Verifier que la page est bien charge
 
 selectionner le projet avec le status Déposée
     [Arguments]  ${INTITULE_PROJET}
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input     ${INTITULE_PROJET}
+    Input Text  xpath=//thead[@class='thead-default']//th[4]/input[1]     ${INTITULE_PROJET}
     Sleep   3s
 
 Clicker sur action

@@ -30,7 +30,7 @@ Rechercher Demande en etude
     commun.Fermer fenetre
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input
     commun.Fermer fenetre
-    Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[4]/input  ${INTITULE_PROJET}
+    Input Text  xpath=//thead[@class='thead-default']//th[4]/input[1]  ${INTITULE_PROJET}
     Clear Element Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[8]/input
     Input Text  xpath=//*[@id="t_demandes"]/thead/tr[2]/th[8]/input  Etudes
     Execute JavaScript  window.scrollTo(1000, 1000)
