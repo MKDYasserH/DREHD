@@ -6,11 +6,11 @@ Resource  Déposée_ressource.robot
 *** Keywords ***
 
 Prendre en compte la demande
-#    [Arguments]  ${INTITULE_PROJET}
+    [Arguments]  ${INTITULE_PROJET}
     Déposée_ressource.Charger La page d'accueil
     Déposée_ressource.Verifier que la page est bien charge
-    Déposée_ressource.effacer filtre
-    Déposée_ressource.selectionne le projet avec le status Déposée
+#    Déposée_ressource.effacer filtre
+    Déposée_ressource.selectionne le projet avec le status Déposée  ${INTITULE_PROJET}
     Déposée_ressource.clicker sur action
 
 Accueil DIF
@@ -20,7 +20,7 @@ Connecter RA
     [Arguments]  ${INTITULE_PROJET}
     Déposée_ressource.Charger Page RA
     Déposée_ressource.Verifier que la page est bien charge
-    Déposée_ressource.effacer filtre
+#    Déposée_ressource.effacer filtre
     Déposée_ressource.selectionne le projet avec le status Déposée  ${INTITULE_PROJET}
     Déposée_ressource.clicker sur action
     Déposée_ressource.Choisir Pilote

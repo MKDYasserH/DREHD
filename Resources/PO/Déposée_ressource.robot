@@ -6,7 +6,8 @@ Resource  ../variables.robot
 Charger La page d'accueil
     Go To  ${WEBSITE_Accueil}
 Verifier que la page est bien charge
-    Wait Until Page Contains  Choisir Le profile
+    commun.Fermer fenetre
+    Wait Until Page Contains  Choisir le profil  50s
 #    popup
     sleep  2s
     commun.Fermer fenetre
@@ -21,8 +22,8 @@ effacer filtre
 
 
 selectionne le projet avec le status Déposée
-#    [Arguments]  ${INTITULE_PROJET}
-    Input Text  xpath=//thead[@class='thead-default']//th[4]/input[1]    intitule_projet
+    [Arguments]  ${INTITULE_PROJET}
+    Input Text  xpath=//thead[@class='thead-default']//th[4]/input[1]    ${INTITULE_PROJET}
     Sleep   3s
 
 Clicker sur action
@@ -60,7 +61,7 @@ Charger Page RA
 
 Choisir Pilote
     Execute JavaScript    window.scrollTo(1000, 1000);
-    Select From List By Value  xpath=//select[@name='pilote_deploiement']  vwtk7928
+    Select From List By Value  xpath=//select[@name='pilote']  vwtk7928
 
 Clicker sur Enregistrer RA
     Execute JavaScript    window.scrollTo(1000, 1000);

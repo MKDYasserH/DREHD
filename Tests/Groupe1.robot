@@ -26,30 +26,30 @@ Demandeur/ Saisie de la demande En Création
 
 Déposée Prise En Compte
     [Tags]  2
-    Déposée.Prendre en compte la demande
+    Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
     Déposée.Accueil DIF
     Déposée.Connecter RA  ${INTITULE_PROJET}
     Déposée.Prendre en compte la demande    ${INTITULE_PROJET}
     Déposée.Accueil DIF 2
     Déposée.Valider demande
 
-#Etude
-#    [Tags]  3
-#    Etude.Acceder Au Site Avec Compte Urbaniste
-#    Etude.Rechercher Demande    ${INTITULE_PROJET}
-#    Etude.Renseigner Info Dif
-#    Etude.Remplir La Fiche Etude
-#    Etude.Verifier Statut Projet    ${INTITULE_PROJET}
-#
-#Réalisation
-#    [Tags]  4
-#    Prendre en compte la demande avec profil Urbaniste  ${INTITULE_PROJET}
-#    Réalisation.Urbanisation-réalisation
-#    Réalisation.Prendre en compte la demande avec profil Pilote  ${INTITULE_PROJET}
-#    Réalisation.Livraison Stockage
-#    Réalisation.Rackage/Câblage/Autres SWANs
-#
-#RECETTE FERMEE
-#    [Tags]  5
-#    Réalisation.Recette
-#    Réalisation.Cloturer
+Etude
+    [Tags]  3
+    Etude.Acceder Au Site Avec Compte Urbaniste
+    Etude.Rechercher Demande    ${INTITULE_PROJET}
+    Etude.Renseigner Info Dif
+    Etude.Remplir La Fiche Etude
+    Etude.Verifier Statut Projet    ${INTITULE_PROJET}
+
+Réalisation
+    [Tags]  4
+    Prendre en compte la demande avec profil Urbaniste  ${INTITULE_PROJET}
+    Réalisation.Urbanisation-réalisation
+    Réalisation.Prendre en compte la demande avec profil Pilote  ${INTITULE_PROJET}
+    Réalisation.Livraison Stockage
+    Réalisation.Rackage/Câblage/Autres SWANs
+
+RECETTE FERMEE
+    [Tags]  5
+    Réalisation.Recette
+    Réalisation.Cloturer

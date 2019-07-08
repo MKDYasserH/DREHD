@@ -6,7 +6,7 @@ Resource  Réalisation_ressource.robot
 Prendre en compte la demande avec profil Pilote
     [Arguments]  ${INTITULE_PROJET}
     Réalisation_ressource.Charger La page de Pilotage
-    Réalisation_ressource.effacer filtre
+#    Réalisation_ressource.effacer filtre
     Réalisation_ressource.Verifier que la page est bien charge
     Réalisation_ressource.selectionner le projet avec le status Déposée  ${INTITULE_PROJET}
     Réalisation_ressource.Clicker sur action
@@ -15,7 +15,7 @@ Prendre en compte la demande avec profil Pilote
 Prendre en compte la demande avec profil Urbaniste
     [Arguments]  ${INTITULE_PROJET}
     Réalisation_ressource.Charger La page d'urbaniste
-    Réalisation_ressource.effacer filtre
+#    Réalisation_ressource.effacer filtre
     Réalisation_ressource.Verifier que la page est bien charge
     Réalisation_ressource.selectionner le projet avec le status Déposée  ${INTITULE_PROJET}
     Réalisation_ressource.Clicker sur action

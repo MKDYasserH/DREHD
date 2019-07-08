@@ -22,7 +22,7 @@ effacer filtre
     Click Link   xpath=//a[.='Effacer le filtre']
     commun.Fermer fenetre
 Verifier que la page est bien charge
-    Wait Until Page Contains  Choisir Le profile
+    Wait Until Page Contains  Choisir le profil
 #    popup
     sleep  2s
     commun.Fermer Fenetre

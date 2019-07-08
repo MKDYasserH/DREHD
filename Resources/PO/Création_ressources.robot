@@ -10,8 +10,9 @@ Charger La page
     Click Element  xpath=/html/body/div[2]/div[4]/div[1]/div
 
 Verifier que la page est bien charge
-    Wait Until Page Contains  Choisir Le profile
-
+    commun.Fermer fenetre
+    Wait Until Page Contains  Choisir le profil  50s
+    commun.Fermer fenetre
 Choisir le profile
     Click Element  xpath=//*[@id="choisirProfil"]
     Click Element  xpath=//*[@id="choisirProfil"]/option[1]
@@ -41,16 +42,16 @@ Renseigner la description du projet
     Clear Element Text  name=projet
     Input Text  name=projet  ${INTITULE_PROJET}
     #Descriptif de la demande*
-    Clear Element Text   name=desc_demande
-    Input Text   name=desc_demande  ${DESCRIPTION_PROJET}
+    Clear Element Text   xpath=//textarea[@name='description']
+    Input Text   xpath=//textarea[@name='description']  ${DESCRIPTION_PROJET}
 
 Renseigner l'implantation
     #Datacenter*
-    Select From List By Label  xpath=//select[@name='datacenter']  NORMANDIE OREE
+    Select From List By Label  xpath=//select[@name='datacenter']  Val-de-Reuil NORMANDIE-OREE
 
 Renseigner Info Complementaire
     #Infrastructure*
-    Select From List By Label  xpath=//select[@name='infra']    GW HORS PROD 1
+    Select From List By Label  xpath=//select[@name='infrastructure']    GW HORS PROD 1
     #Responsable Patrimonial
     Wait Until Element Is Visible  xpath=//select[@name='responsable_patrimonial']  50s
     Select From List By Value  xpath=//select[@name='responsable_patrimonial']    33
@@ -96,7 +97,7 @@ Renseigner Info materiel existant
     Wait Until Keyword Succeeds  50s    5s  Click Element    xpath=//button[@id='sm_save_materiel']
 Renseigner Info cablage
     Wait Until Page Contains  Liste de Matériel
-    Click Image  xpath=//img[@src='/debug.php/assets/v3/drehdlib/images/icon2.png']
+    Click Image  xpath=//img[@src='/debug.php/assets/v3/drehdlib/img/icon_edit_cablage.png']
     Wait Until Page Contains  Edition du cablage
     Click Button  id=addLigne
     Wait Until Page Contains  Traiter une ligne de cablage
